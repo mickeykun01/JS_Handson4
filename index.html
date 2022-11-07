@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: rgb(224, 46, 76);">handson 4 logics</h1>
+
+    <h3>Find the Product of a given number</h3>
+    <pre>const Find_Prod = (array, N) => 
+        {
+          const result = array.reduce((num , N) => num * N);
+          return(result);
+             
+        
+        };
+    </pre>
+
+    <h3>Find the Sum of given number.</h3>
+    <pre>
+        const Find_Sum = (array, N) => 
+{
+  let sum = 0;
+  for(let i=0 ; i < array.length ; i++){
+    sum = sum + array[i];
+  }
+ return sum;
+};
+</pre>
+
+<h3>Count Occurrences in the given number.</h3>
+<pre>const findCount = (N, K, Arr) => 
+    {
+        let count = 0;
+        for(let i=0 ; i < N ; i++){
+          if(Arr[i] == K) {
+            count+= 1;
+          }
+        }
+        return count;
+    };
+</pre>
+
+<h3>Even Odd in an given array</h3>
+<pre>const findEvenOdd = (N, Arr) => 
+    {
+        let B=[];
+        var a = Arr.filter((x) => x%2 === 0);
+        var b = a.reduce((acc,sum) => acc = acc+sum,0);
+        B.push(b);
+        
+        var c = Arr.filter((x) => x%2 !== 0);
+        var d = c.reduce((acc,sum) => acc = acc+sum,0);
+        B.push(d);
+        
+        return B;
+    };
+</pre>
+
+<h3>Find whether the number is present or not</h3>
+<pre>const Find_Num = (array,N,M) => 
+    {
+      if(array.indexOf(M) === -1){
+        return 'NO';
+        
+      }
+      else {
+        return 'YES';
+      }
+    };
+</pre>
+
+<h3>Higher Age in an given array</h3>
+<pre>const highAge = (N, Arr) => 
+    {
+        const B = Arr.filter((N) => N>=18);
+        return B;
+    };
+</pre>
+
+<h3>Increment the Array Elements</h3>
+<pre>const Inc_Arr = (array,N) => 
+    {
+      const result = array.map((N)=> N+1);
+      console.log(...result);
+    
+    };
+</pre>
+
+<h3>Pass or Fail in the exam</h3>
+<pre>const isAllPass = (N, Arr) => 
+    {
+        if(Arr.every((N) => N>=32)) {
+          return 'YES';
+        }
+        
+        else{
+          return 'NO';
+        }
+    };
+</pre>
+
+<h3>Unique Color Shirt</h3>
+<pre>function Unique_Shirts (arr,N) {
+
+    let unique=arr.filter((value)=>arr.indexOf(value)===arr.lastIndexOf(value));
+    return (unique.length);
+  }
+</pre>
+
+<h3>Min and Max in the given array</h3>
+<pre> function arrayMin(arr) {
+    const result = Math.min(...arr);
+    return (result);
+  
+  }
+  
+  function arrayMax(arr) {
+   const result1 = Math.max(...arr);
+    return (result1);
+  
+  }
+</pre>
+
+<h3>Birthday Game</h3>
+<pre>function Birthday_Game(arr,D ,M) {
+    let counter = 0;
+    for(let i = 0; i<= arr.length - 1; i++){
+      let subArray = arr.slice(i, i+M);
+      if(subArray.length === M){
+        let sum = subArray.reduce((a,b)=> a+b,0);
+        
+        if(sum === D){
+          counter += 1;
+        }
+      }
+    }
+    return counter;
+   
+   }
+</pre>
+</body>
+</html>
